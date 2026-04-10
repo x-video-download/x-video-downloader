@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-brand-sans: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, sans-serif;
+  --color-surface: #ffffff;
+  --color-surface-muted: #fafafa;
+  --color-surface-elevated: #f5f5f5;
+  --color-nav: #0a0a0a;
+  --color-accent: #0a0a0a;
+  --color-accent-muted: #737373;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-dvh bg-[var(--color-surface)] font-sans text-neutral-800 antialiased;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(0, 0, 0, 0.04), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(0, 0, 0, 0.02), transparent);
+}
+
+/* Neo-grotesque brand type — same stack as nav title */
+.brand-title {
+  font-family: var(--font-brand-sans);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Page headings: same family, sentence case, slightly tighter tracking */
+.heading-brand {
+  font-family: var(--font-brand-sans);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
